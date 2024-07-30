@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dinas\SekolahController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('sekolah', [SekolahController::class, 'index'])->name('sekolah');
     Route::get('sekolah/tambah', [SekolahController::class, 'create'])->name('sekolah.tambah');
     Route::post('sekolah/tambah', [SekolahController::class, 'save'])->name('sekolah.simpan');
+    
+    Route::get('pengguna', [UserController::class, 'index'])->name('pengguna');
+    Route::get('pengguna/tambah', [UserController::class, 'create'])->name('pengguna.tambah');
+    Route::post('pengguna/tambah', [UserController::class, 'save'])->name('pengguna.simpan');
 });

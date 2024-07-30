@@ -21,7 +21,7 @@
                     Anggaran
                 </a>
                 <!-- Sidenav Link (Charts)-->
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link {{ set_active('pengguna') }}" href="{{ route('pengguna') }}">
                     <div class="nav-link-icon"><i data-feather="users"></i></div>
                     Pengguna
                 </a>

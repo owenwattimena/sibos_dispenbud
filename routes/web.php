@@ -36,4 +36,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('pengguna', [UserController::class, 'index'])->name('pengguna');
     Route::get('pengguna/tambah', [UserController::class, 'create'])->name('pengguna.tambah');
     Route::post('pengguna/tambah', [UserController::class, 'save'])->name('pengguna.simpan');
+    Route::get('pengguna/ubah/{id}', [UserController::class, 'edit'])->name('pengguna.ubah');
+    Route::put('pengguna/ubah/{id}', [UserController::class, 'update'])->name('pengguna.update');
+    Route::delete('pengguna/hapus/{id}', [UserController::class, 'delete'])->name('pengguna.delete');
+
 });

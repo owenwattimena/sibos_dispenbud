@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Helpers\AlertFormatter;
 
@@ -33,7 +34,7 @@ class UserController extends Controller
         $user = new User;
         $user->nama = $request->nama;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->email = $request->email;
         $user->level = $request->level;
 
